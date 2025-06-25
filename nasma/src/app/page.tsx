@@ -1,3 +1,5 @@
+import AboutAndWhyUsSections from '@/components/AboutAndWhyUsSections';
+import DesignsSection from '@/components/DesignsSection';
 import Hero from '@/components/Hero';
 import MainContent from '@/components/MainContent';
 import Navbar from '@/components/NavBar';
@@ -25,38 +27,30 @@ export default function Home() {
         <MainContent />
       </section>
 
-      {/* This section has a light background, so the nav should have dark text */}
-      <section
-        id="designs"
-        data-theme="light"
-        className="relative h-screen w-full bg-coastal-linen flex items-center justify-center"
-      >
-        <h2 className="text-5xl text-coastal-clay" style={{ fontFamily: "'Montserrat', sans-serif" }}>
-          قسم تصاميمنا
-        </h2>
+      <section data-theme="light">
+        <div
+          className="relative h-[100px] w-full bg-gradient-to-b from-[#ebebeb] to-white"
+          style={{
+            maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
+            WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
+          }}
+        />
       </section>
 
-      {/* Dark background section */}
-      <section
-        id="about"
-        data-theme="light"
-        className="relative h-screen w-full bg-seaside-aloe flex items-center justify-center"
-      >
-        <h2 className="text-5xl text-coastal-clay" style={{ fontFamily: "'Montserrat', sans-serif" }}>
-          قسم من نحن
-        </h2>
+      <DesignsSection />
+
+      <section data-theme="light">
+        <div
+          className="relative h-[100px] w-full bg-gradient-to-b from-[#ebebeb] to-white"
+          style={{
+            maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
+            WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
+          }}
+        />
       </section>
 
-      {/* Dark background section */}
-      <section
-        id="why-us"
-        data-theme="light"
-        className="relative h-screen w-full bg-coastal-clay flex items-center justify-center"
-      >
-        <h2 className="text-5xl text-coastal-clay" style={{ fontFamily: "'Montserrat', sans-serif" }}>
-          قسم لماذا نحن
-        </h2>
-      </section>
+      <AboutAndWhyUsSections />
+
     </>
   );
 }

@@ -30,9 +30,7 @@ export default function Navbar() {
         if (sectionTop <= 60) { // 60px is a good offset for a typical navbar height
           currentTheme = section.getAttribute('data-theme') || 'dark';
         }
-      });
-      console.log(currentTheme);
-      
+      });      
       setNavTheme(currentTheme);
     };
 
@@ -50,17 +48,18 @@ export default function Navbar() {
   const logoSrc = navTheme === 'light' ? '/nasma_logo.png' : '/nasma_logo_white.png';
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 transition-colors duration-300">
-      <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <header className="fixed inset-x-0 top-0 z-50 transition-colors duration-300 backdrop-blur-md">
+      <nav className="flex items-center justify-between p-4 pt-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
           <Link href="#home" className="-m-1.5 p-1.5">
             <span className="sr-only">Nasma</span>
             <Image
               width={120}
               height={40}
-              src={logoSrc} // Use the dynamic logo source
+              src={logoSrc}
               alt="Nasma Logo"
-              key={logoSrc} // Add key to force re-render on src change
+              key={logoSrc}
+              className='w-[80px] h-[30px] lg:w-30 lg:h-10'  
             />
           </Link>
         </div>
@@ -99,7 +98,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between">
             <Link href="#home" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
               <span className="sr-only">Nasma</span>
-              <Image width={120} height={40} src="/nasma_logo_white.png" alt="Nasma Logo" />
+              <Image width={60} height={20} src="/nasma_logo_white.png" alt="Nasma Logo" />
             </Link>
             <button type="button" className="-m-2.5 rounded-md p-2.5 text-white" onClick={() => setMobileMenuOpen(false)}>
               <span className="sr-only">Close menu</span>

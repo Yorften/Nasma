@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@import "lightgallery/css/lightgallery.css";
+@import "lightgallery/css/lg-thumbnail.css";
+@import "lightgallery/css/lg-zoom.css";
 
 :root {
   --background: #ffffff;
@@ -8,6 +11,10 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-seaside: #B6C1B0;
+  --color-sky: #D0E2F2;
+  --color-pebble: #AFBCC5;
+  --color-coastal: #BFAC95;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -29,3 +36,7 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Because the html is RTL we need to override the lg-outer that was left */
+.lg-outer{
+  text-align: right !important;
+}

@@ -11,6 +11,7 @@
   "dependencies": {
     "@headlessui/react": "^2.2.4",
     "gsap": "^3.13.0",
+    "lightgallery": "^2.9.0-beta.1",
     "lucide-react": "^0.523.0",
     "next": "15.3.4",
     "react": "^19.0.0",
