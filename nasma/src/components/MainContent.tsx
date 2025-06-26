@@ -12,6 +12,7 @@ const MainContent = () => {
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
+                backgroundAttachment: 'fixed',
             }}
         >
 
